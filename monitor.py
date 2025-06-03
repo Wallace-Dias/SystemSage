@@ -1,7 +1,7 @@
 import psutil, time
 
 # Cria ou abre o arquivo de log
-with open("Monitoramento.txt", "w") as arquivo:
+with open("Monitoramento.txt", "a") as arquivo:
     
     #Cabeçalho
     arquivo.write("Monitoramento de Sistema CPU | RAM | DISCO\n")

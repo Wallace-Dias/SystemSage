@@ -10,3 +10,15 @@ CPU: 32.5% | RAM: 93.1% | DISCO: 96.2%
 CPU: 38.2% | RAM: 93.2% | DISCO: 96.2%
 CPU: 34.5% | RAM: 93.2% | DISCO: 96.2%
 CPU: 27.6% | RAM: 93.3% | DISCO: 96.2%
+Monitoramento de Sistema CPU | RAM | DISCO
+----------------------------------------
+CPU: 0.0% | RAM: 94.3% | DISCO: 96.2%
+CPU: 48.9% | RAM: 94.4% | DISCO: 96.2%
+CPU: 28.7% | RAM: 94.3% | DISCO: 96.2%
+CPU: 34.2% | RAM: 94.3% | DISCO: 96.2%
+CPU: 41.2% | RAM: 94.0% | DISCO: 96.2%
+CPU: 37.1% | RAM: 93.9% | DISCO: 96.2%
+CPU: 34.0% | RAM: 94.2% | DISCO: 96.2%
+CPU: 35.9% | RAM: 93.6% | DISCO: 96.2%
+CPU: 21.9% | RAM: 93.4% | DISCO: 96.2%
+CPU: 23.6% | RAM: 93.2% | DISCO: 96.2%
