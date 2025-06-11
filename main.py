@@ -1,8 +1,26 @@
+""" 
+Missão 1: Coletar Informações de Sistema
+Objetivo: Criar um script Python que:
+
+[x] - Mostre o uso da CPU (%)
+
+[x] - Mostre o uso da RAM (em MB e %)
+
+[x] - Mostre o uso do Disco (em GB e %)
+
+[x] - Liste os 5 processos que mais consomem CPU
+
+
+ """
+
+
+
 import psutil, time
 #Lista para armazenar os processos com seus uss de CPU
 processos = []
 
 cpu = psutil.cpu_percent(interval=1)
+cpu2 = psutil.cpu_percent(interval=1)
 ram_porcentagem = psutil.virtual_memory().percent
 ram = psutil.virtual_memory()
 disk = psutil.disk_usage("/")
@@ -30,8 +48,13 @@ for proc in psutil.process_iter(['pid', 'name']):
     try:
         uso_cpu = proc.cpu_percent(interval=0.1)
 # Mede o uso de CPU em %
-processos.append((proc.info['pid'], proc.info['name'], uso_cpu)) except (psutil.NoSuchProcess, psutil.AcessDenied):
-    continue #ignora  processos que não podem ser acessados
+        processos.append((proc.info['pid'], proc.info['name'], uso_cpu)) 
+    except (psutil.NoSuchProcess, psutil.AcessDenied):
+        continue #ignora  processos que não podem ser acessados
+
+
+
+
 
 #Ordena do maior para o menor uso de CPU
 processos.sort(key=lambda x: x[2], reverse=True)
@@ -39,6 +62,6 @@ processos.sort(key=lambda x: x[2], reverse=True)
 #Mostra os 5 primeiros
 print("Top 5 processos que mais usam CPU: ")
 for pid, nome, cpu in processos[:5]:
-    print(f"PID: {pid: <6} | Nome: {nome: <25} | CPU: {cpu:.2f}%")
+    print(f"PID: {pid: <6} | Nome: {nome: <25} | CPU: {cpu2}%")
 
     
