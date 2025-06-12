@@ -1,6 +1,6 @@
 import psutil
 #01
-""" for proc in psutil.process_iter(['pid'], ['name']):
+for proc in psutil.process_iter(['pid'], ['name']):
     try:
         print(proc.info['name'])
     except:
@@ -15,12 +15,8 @@ for proc in psutil.process_iter(['pid', 'name']):
             print(f"{proc.info['name']} está usando {uso}% da CPU")
     except:
         continue
- """
-# 03
-""" Ordenar processos por uso de CPU
-Tente por conta própria repetir o que já fez na missão anterior, 
-mas ordenando pela RAM usada (dica: proc.memory_info().rss converte RAM para bytes). """
 
+# 03
 
 for proc in psutil.process_iter(['pid'], ['name']):
     try:

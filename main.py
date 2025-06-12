@@ -13,14 +13,13 @@ Objetivo: Criar um script Python que:
 
  """
 
-
+# Monitor Básico.py
 
 import psutil, time
 #Lista para armazenar os processos com seus uss de CPU
 processos = []
 
 cpu = psutil.cpu_percent(interval=1)
-cpu2 = psutil.cpu_percent(interval=1)
 ram_porcentagem = psutil.virtual_memory().percent
 ram = psutil.virtual_memory()
 disk = psutil.disk_usage("/")
@@ -62,6 +61,6 @@ processos.sort(key=lambda x: x[2], reverse=True)
 #Mostra os 5 primeiros
 print("Top 5 processos que mais usam CPU: ")
 for pid, nome, cpu in processos[:5]:
-    print(f"PID: {pid: <6} | Nome: {nome: <25} | CPU: {cpu2}%")
+    print(f"PID: {pid: <6} | Nome: {nome: <25} | CPU: {cpu:.2f}%")
 
     

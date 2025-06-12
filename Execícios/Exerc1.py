@@ -1,4 +1,4 @@
-import psutil
+import psutil, time
 
 """ psutil.cpu_percent()
 psutil.virtual_memory()
@@ -7,7 +7,6 @@ psutil.net_io_counters()
 psutil.pids()
 psutil.Process(pid)
 psutil.process_iter() """
-
 
 cpu = psutil.cpu_percent(interval=1)
 ram = psutil.virtual_memory().percent

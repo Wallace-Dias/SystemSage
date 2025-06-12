@@ -21,27 +21,29 @@ Objetivo: Escreva um código que mostre apenas os
 processos que estão usando mais de 0% de CPU. """
 
 #02
-""" for proc in psutil.process_iter(['pid'], ['name']):
-    cpu = psutil.cpu_percent(interval=0.1)
-    if cpu > 0:
-        try:
-            print(proc.name(), f'Está usando: {cpu} % da CPU')
-        except:
-            continue """
-    
+
+for proc in psutil.process_iter(['pid', 'name']):
+    try:
+        uso = proc.cpu_percent(interval=0.1)
+        if uso > 0:
+            print(proc.name(), f"está usando {uso:.2f}% da CPU")
+    except:
+        continue
+
+
+
+
+
 
 """ Exercício 3 Mostrar uso de RAM dos processos
 Objetivo: Escreva um código que mostre o nome do processo e 
 quanto de memória RAM (em MB) ele está usando. """
 
 # 03
-""" for proc in psutil.process_iter(['pid'],['name']):
-    ram = psutil.virtual_memory()
-    ram_mb = ram.total / (1024 ** 2)
+
+for proc in psutil.process_iter(['pid', 'name']):
     try:
-        print(proc.name(), f'Está usando {ram_mb:.2f} MB')
+        ram_usada = proc.memory_info().rss / (1024 ** 2)
+        print(proc.name(), f"está usando {ram_usada:.2f} MB de RAM")
     except:
         continue
- """
-
-
